@@ -1,0 +1,43 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.yepdemo.qa",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "6.10.4",
+    "applicationType": "monolith",
+    "baseName": "yepDemoApp",
+    "packageName": "com.yepdemo.qa",
+    "packageFolder": "com/yepdemo/qa",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "NTU2YjMyZmQ5YzEyYWNmMDE1MTIzNzdlY2FjNWE1MDE0ZTZjYWZiZTdiMGM1YjM2NGIyMDk4Yzg2ZGQ4NWUyOThkMzU2N2M2NGMwZWZmZDQxMDYwMWIwZGFjZDI5YjdkYTdjZjc3YmMwMmUyMDc3ODdlZWFlZDJkNzAzNTRlZGY=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "yeti",
+    "clientThemeVariant": "primary",
+    "creationTimestamp": 1603730680844,
+    "testFrameworks": ["cucumber"],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": ["en"],
+    "blueprints": []
+  }
+}
