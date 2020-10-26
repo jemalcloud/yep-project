@@ -38,6 +38,9 @@
     "enableTranslation": true,
     "nativeLanguage": "en",
     "languages": ["en"],
-    "blueprints": []
+    "blueprints": [],
+    "herokuAppName": "yep-demo-app",
+    "herokuDeployType": "git",
+    "herokuJavaVersion": "1.8"
   }
 }
