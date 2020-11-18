@@ -17,7 +17,7 @@ logging:
   level:
     ROOT: DEBUG
     io.github.jhipster: DEBUG
-    com.yepdemo.qa: DEBUG
+    com.qualitycodebase: DEBUG
 
 spring:
   profiles:
@@ -37,8 +37,8 @@ spring:
       indent-output: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:h2:file:./target/h2db/db/yepdemoapp;DB_CLOSE_DELAY=-1
-    username: yepDemoApp
+    url: jdbc:h2:mem:yepdemo;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: yepdemo
     password:
     hikari:
       poolName: Hikari
@@ -48,15 +48,28 @@ spring:
       enabled: false
   jpa:
     database-platform: io.github.jhipster.domain.util.FixedH2Dialect
+    database: H2
     show-sql: true
+    properties:
+      hibernate.id.new_generator_mappings: true
+      hibernate.connection.provider_disables_autocommit: true
+      hibernate.cache.use_second_level_cache: true
+      hibernate.cache.use_query_cache: false
+      hibernate.generate_statistics: false
   liquibase:
     # Remove 'faker' if you do not want the sample data to be loaded automatically
     contexts: dev, faker
   mail:
-    host: localhost
-    port: 25
-    username:
-    password:
+    host: smtp.gmail.com
+    port: 587
+    username: jemalmoh.cloud@gmail.com
+    password: Link@2020
+    protocol: smtp
+    tls: true
+    properties.mail.smtp:
+      auth: true
+      starttls.enable: true
+      ssl.trust: smtp.gmail.com
   messages:
     cache-duration: PT1S # 1 second, see the ISO 8601 standard
   thymeleaf:
@@ -88,7 +101,7 @@ jhipster:
     authentication:
       jwt:
         # This token must be encoded using Base64 and be at least 256 bits long (you can type `openssl rand -base64 64` on your command line to generate a 512 bits one)
-        base64-secret: NTU2YjMyZmQ5YzEyYWNmMDE1MTIzNzdlY2FjNWE1MDE0ZTZjYWZiZTdiMGM1YjM2NGIyMDk4Yzg2ZGQ4NWUyOThkMzU2N2M2NGMwZWZmZDQxMDYwMWIwZGFjZDI5YjdkYTdjZjc3YmMwMmUyMDc3ODdlZWFlZDJkNzAzNTRlZGY=
+        base64-secret: NGQ3ZTkzOWY5YTA3ZmRkN2U1MTlhYTE2YjY5ZjVjZDcwZTAyNzM4MjgxNTAyNDI3ODAyYzZmOWZmMGIwZTQwNDc1MDkwNzY5YjA0MmIyMTU4N2JkMjliNGJmYTZmMDA1MzZkNTg5OWExMjJmMTQzZWQ4NGFkNDYyMmE5NmE2ODk=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
         token-validity-in-seconds-for-remember-me: 2592000
